@@ -1,0 +1,2 @@
+-- Internship Tracking and Evaluation System
+-- TODO: Add database tables based on the team's ER diagram.
