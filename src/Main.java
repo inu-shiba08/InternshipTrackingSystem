@@ -1,10 +1,24 @@
+```java
+package ui;
+
 import javax.swing.SwingUtilities;
-import ui.LoginUI;
+import javax.swing.UIManager;
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Internship Tracking and Evaluation System");
-        // TODO: Connect the application entry point to LoginUI.
-        // SwingUtilities.invokeLater(() -> new LoginUI().setVisible(true));
+
+        try {
+            UIManager.setLookAndFeel(
+                UIManager.getSystemLookAndFeelClassName()
+            );
+        } catch (Exception e) {
+            // Use default look and feel
+        }
+
+        SwingUtilities.invokeLater(() -> {
+            new LoginUI().setVisible(true);
+        });
     }
 }
+```
